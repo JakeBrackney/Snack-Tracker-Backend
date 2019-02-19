@@ -54,7 +54,7 @@ app.delete("/api/restaurants/:id", (req, res) => {
 });
 
 app.put("api/restaurants/:id", (req, res) => {
-  Bookmark.findOneAndUpdate({ _id: req.params.id })
+  Restaurant.findOneAndUpdate({ _id: req.params.id })
     .then(restaurant => {
       res.json(restaurant);
     })
