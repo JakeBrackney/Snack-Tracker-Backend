@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Clarity",
+      "dateVisited": "November, 28, 2018",
+      "cuisine": "New American",
+      "city": "Vienna VA",
+      "budget": "$$$",
+      "accolades": "Washingtonian Top 100 Restaurants 2015-18, Northern Virginia Top 50 Restaurants, #3 2016",
+      "notes": "Seared Hudson Valley Duck Foie Gras is a must"
+    },
+    {
+      "name": "Le Jules Verne",
+      "dateVisited": "February 21, 2018",
+      "cuisine": "French",
+      "city": "Paris France",
+      "budget": "$$$",
+      "accolades": "One Michelin Star",
+      "notes": "Located within the Eiffel Tower. Good, not great."
+    },
+    {
+      "name": "Franklin Barbecue",
+      "dateVisited": "September 9 2018",
+      "cuisine": "Southern Barbecue",
+      "city": "Austin, TX",
+      "budget": "$$",
+      "accolades": "James Beard Foundation Award, Best Chef: Southwest 2015",
+      "notes": "Best brisket I've ever had, period."
+    },
+    {
+      "name": "Kinship",
+      "dateVisited": "March 27, 2018",
+      "cuisine": "New American",
+      "city": "Washington DC",
+      "budget": "$$$",
+      "accolades": "One Michelin Star",
+      "notes": "Maine Lobster French Toast is unreal. Also the ossetra caviar is incredible, if you can splurge."
+    },
+    {
+      "name": "Taco Bamba",
+      "dateVisited": "many visits",
+      "cuisine": "Mexican fusion tacos",
+      "city": "Falls Church VA",
+      "budget": "$",
+      "accolades": "Best of Northern Virginia, NoVA Magazine",
+      "notes": "Guac made from grilled avocados. The signature Taco Bamba and the street corn are a must."
+    }
+  
