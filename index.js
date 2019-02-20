@@ -4,11 +4,13 @@ const cors = require("cors");
 const passport = require('./config/passport')()
 const app = express();
 
+const userController = require('./controllers/users')
 const restaurantController = require('./controllers/restaurants')
 
 app.set("port", process.env.PORT || 3001);
 
 app.use('/api/restaurants', restaurantController)
+app.use('/users', userController)
 app.use(parser.json());
 app.use(cors());
 app.use(passport.initialize())

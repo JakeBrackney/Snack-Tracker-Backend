@@ -1,4 +1,4 @@
-const mongoose = require('./connection.js')
+const mongoose = require('./connection')
 
 const CommentSchema = new mongoose.Schema({
   content: String,

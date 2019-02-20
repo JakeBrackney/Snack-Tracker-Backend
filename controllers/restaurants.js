@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-const Restaurant = require('../db/models.js')
+const Restaurant = require('../db/models')
 
 //show all restaurant entries
 router.get("/api/restaurants", (req, res) => {
-    Restaurant.find()
+    Restaurant.find({})
       .then(restaurants => {
         res.json(restaurants);
       })
