@@ -3,7 +3,7 @@ const mongoose = require('./connection.js')
 const CommentSchema = new mongoose.Schema({
   content: String,
   dateVisited: String 
-})
+});
 const RestaurantSchema = new mongoose.Schema({
   name: String,
   dateVisited: String,
@@ -11,8 +11,9 @@ const RestaurantSchema = new mongoose.Schema({
   city: String,
   budget: String,
   accolades: String,
-  notes: String
-})
+  notes: String,
+  comments: CommentSchema,
+});
 
 module.exports = 
   mongoose.model('Restaurant', RestaurantSchema),
