@@ -1,7 +1,7 @@
 const express = require("express");
 const parser = require("body-parser");
 const cors = require("cors");
-const Restaurant = require('./db/models') 
+const Restaurant = require("./db/models");
 
 const app = express();
 
@@ -9,10 +9,15 @@ app.set("port", process.env.PORT || 3001);
 app.use(parser.json());
 app.use(cors());
 
-app.listen(app.get('port'), () => {
-    console.log(`✅ PORT: ${app.get('port')} 🌟`)
-  })
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/client/build/index.html");
+});
+
+app.use(express.static("client/build"));
 //show all restaurant entries
 app.get("/api/restaurants", (req, res) => {
   Restaurant.find()
@@ -24,7 +29,7 @@ app.get("/api/restaurants", (req, res) => {
     });
 });
 
-//create a restaurant entry 
+//create a restaurant entry
 app.post("/api/restaurants", (req, res) => {
   Restaurant.create(req.body)
     .then(restaurant => {
@@ -46,7 +51,7 @@ app.get("/api/restaurants/:id", (req, res) => {
     });
 });
 
-//delete one restaurant entry 
+//delete one restaurant entry
 app.delete("/api/restaurants/:id", (req, res) => {
   Restaurant.findOneAndRemove({ _id: req.params.id })
     .then(restaurant => {
@@ -57,12 +62,12 @@ app.delete("/api/restaurants/:id", (req, res) => {
     });
 });
 //update a restaurant entry
-app.put("api/restaurants/:id", (req, res) => {
+app.put("/api/restaurants/:id", (req, res) => {
   Restaurant.findOneAndUpdate({ _id: req.params.id })
     .then(restaurant => {
       res.json(restaurant);
     })
     .catch(err => {
       console.log(err);
-    })
+    });
 });
