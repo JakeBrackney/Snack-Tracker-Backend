@@ -3,7 +3,7 @@
       "name": "Clarity",
       "dateVisited": "November 28, 2018",
       "cuisine": "New American",
-      "city": "Vienna VA",
+      "city": "Vienna, VA",
       "budget": "$$$",
       "accolades": "Washingtonian Top 100 Restaurants 2015-18, Northern Virginia Top 50 Restaurants, #3 2016",
       "notes": "Seared Hudson Valley Duck Foie Gras is a must"
@@ -12,7 +12,7 @@
       "name": "Le Jules Verne",
       "dateVisited": "February 21, 2018",
       "cuisine": "French",
-      "city": "Paris France",
+      "city": "Paris, France",
       "budget": "$$$",
       "accolades": "One Michelin Star",
       "notes": "Located within the Eiffel Tower. Good, not great."
@@ -30,18 +30,27 @@
       "name": "Kinship",
       "dateVisited": "March 27, 2018",
       "cuisine": "New American",
-      "city": "Washington DC",
-      "budget": "$$$",
+      "city": "Washington, DC",
+      "budget": "$$$$",
       "accolades": "One Michelin Star",
       "notes": "Maine Lobster French Toast is unreal. Also the ossetra caviar is incredible, if you can splurge."
     },
     {
       "name": "Taco Bamba",
-      "dateVisited": "many visits",
+      "dateVisited": "Many visits",
       "cuisine": "Mexican fusion tacos",
-      "city": "Falls Church VA",
+      "city": "Falls Church, VA",
       "budget": "$",
       "accolades": "Best of Northern Virginia, NoVA Magazine",
       "notes": "Guac made from grilled avocados. The signature Taco Bamba and the street corn are a must."
+    },
+    {
+      "name": "Founding Farmers",
+      "dateVisited": "Many visits",
+      "cuisine": "American, Farm to table",
+      "city": "Multiple",
+      "budget": "$$",
+      "accolades": "Open Table 100 best brunch spots in America 2018",
+      "notes": "The brunch buffet is incredible. The Jefferson Donuts are amazing."
     }
 ]
