@@ -46,23 +46,26 @@ app.get("/api/restaurants/:id", (req, res) => {
     });
 });
 
-//delete one restaurant entry 
-app.delete("/api/restaurants/:id", (req, res) => {
-  Restaurant.findOneAndRemove({ _id: req.params.id })
-    .then(restaurant => {
-      res.json(restaurant);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-});
 //update a restaurant entry
 app.put("/api/restaurants/:id", (req, res) => {
-  Restaurant.findOneAndUpdate({ _id: req.params.id })
+  console.log("put");
+  console.log(req.body);
+  Restaurant.findOneAndUpdate({ _id: req.params.id }, req.body)
     .then(restaurant => {
       res.json(restaurant);
     })
     .catch(err => {
       console.log(err);
     })
+ });
+
+//delete one restaurant entry
+app.delete("/api/restaurants/:id", (req, res) => {
+ Restaurant.findOneAndRemove({ _id: req.params.id })
+   .then(restaurant => {
+     res.json(restaurant);
+   })
+   .catch(err => {
+     console.log(err);
+   });
 });

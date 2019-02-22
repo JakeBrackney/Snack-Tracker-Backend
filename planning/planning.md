@@ -9,3 +9,6 @@ Silver:
 
 Gold/Stretch Goals: 
 * integrate a google maps API that pins each restaurant on the map.
+
+Git Workflow : 
+* use branching 
