@@ -2,7 +2,7 @@ const mongoose = require('./connection.js')
 
 const CommentSchema = new mongoose.Schema({
   content: String,
-  dateVisited: new Date() 
+  dateVisited: String
 });
 
 const RestaurantSchema = new mongoose.Schema({
