@@ -57,7 +57,7 @@ app.delete("/api/restaurants/:id", (req, res) => {
     });
 });
 //update a restaurant entry
-app.put("api/restaurants/:id", (req, res) => {
+app.put("/api/restaurants/:id", (req, res) => {
   Restaurant.findOneAndUpdate({ _id: req.params.id })
     .then(restaurant => {
       res.json(restaurant);
