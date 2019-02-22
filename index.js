@@ -50,8 +50,13 @@ app.get("/api/restaurants/:id", (req, res) => {
 app.put("/api/restaurants/:id", (req, res) => {
   console.log("put");
   console.log(req.body);
-  Restaurant.findOneAndUpdate({ _id: req.params.id }, req.body)
+  // findone
+  // then
+  // restaurant.comments.push({comment: req.body.comment})
+  Restaurant.findOne({ _id: req.params.id })
     .then(restaurant => {
+      restaurant.comments.push({content: req.body.newComment, dateVisited: req.body.dateVisited})
+      restaurant.save()
       res.json(restaurant);
     })
     .catch(err => {
