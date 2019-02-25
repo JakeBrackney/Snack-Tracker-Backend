@@ -2,6 +2,7 @@ const express = require("express");
 const parser = require("body-parser");
 const cors = require("cors");
 const Restaurant = require('./db/models') 
+const Comment = require('./db/models')
 
 const app = express();
 
@@ -65,9 +66,9 @@ app.put("/api/restaurants/:id", (req, res) => {
  });
 
   // retrieve a comment
-  app.get('/api/restaurants/:id/:id', (req, res) => {
+  app.get('/api/restaurants/:id', (req, res) => {
     console.log("comment selected")
-    Comment.findOne({ _id: req.params.id })
+    Restaurant.comment.findOne({ _id: req.params.id })
     .then(comment => {
       comment.comments.filter({ content: req.body.comment })
       res.json(comment)
@@ -78,7 +79,7 @@ app.put("/api/restaurants/:id", (req, res) => {
   })
  
   // update comment
-  app.put('/api/restaurants/:id/:id', (req, res) => {
+  app.put('/api/restaurants/:id', (req, res) => {
     Comment.findOneAndUpdate({ _id: req.params.id })
     .then(comment => {
       res.json(comment)
