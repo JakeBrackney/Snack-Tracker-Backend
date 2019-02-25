@@ -67,10 +67,10 @@ app.put("/api/restaurants/:id", (req, res) => {
 
   // retrieve a comment
   app.get('/api/restaurants/:id', (req, res) => {
-    console.log("comment selected")
-    Restaurant.comment.findOne({ _id: req.params.id })
+    console.log(restaurant.comments) 
+    Comment.findOne({ content: req.body.comment })
     .then(comment => {
-      comment.comments.filter({ content: req.body.comment })
+      restaurant.comments.filter({ content: req.body.comment })
       res.json(comment)
     })
     .catch(err => {
