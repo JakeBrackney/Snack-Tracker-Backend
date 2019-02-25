@@ -64,6 +64,31 @@ app.put("/api/restaurants/:id", (req, res) => {
     })
  });
 
+  // retrieve a comment
+  app.get('/api/restaurants/:id/:id', (req, res) => {
+    console.log("comment selected")
+    Comment.findOne({ _id: req.params.id })
+    .then(comment => {
+      comment.comments.filter({ content: req.body.comment })
+      res.json(comment)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  })
+ 
+  // update comment
+  app.put('/api/restaurants/:id/:id', (req, res) => {
+    Comment.findOneAndUpdate({ _id: req.params.id })
+    .then(comment => {
+      res.json(comment)
+      console.log("update attempted")
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  })
+
 //delete one restaurant entry
 app.delete("/api/restaurants/:id", (req, res) => {
  Restaurant.findOneAndRemove({ _id: req.params.id })
