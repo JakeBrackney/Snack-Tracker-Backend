@@ -46,13 +46,10 @@ app.get("/api/restaurants/:id", (req, res) => {
     });
 });
 
-//update a restaurant entry
+//Add comment
 app.put("/api/restaurants/:id", (req, res) => {
   console.log("put");
   console.log(req.body);
-  // findone
-  // then
-  // restaurant.comments.push({comment: req.body.comment})
   Restaurant.findOne({ _id: req.params.id })
     .then(restaurant => {
       restaurant.comments.push({content: req.body.newComment, dateVisited: req.body.dateVisited})
@@ -63,6 +60,18 @@ app.put("/api/restaurants/:id", (req, res) => {
       console.log(err);
     })
  });
+
+ //update restaurant entry
+ app.put('/api/restaurants/:id/edit', (req, res) => {
+  Restaurant.findByIdAndUpdate({ })
+  .then(restaurant => {
+    restaurant.save()
+    res.json(restaurant)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+});
 
 //delete one restaurant entry
 app.delete("/api/restaurants/:id", (req, res) => {
