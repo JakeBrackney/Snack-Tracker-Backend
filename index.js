@@ -47,7 +47,7 @@ app.get("/api/restaurants/:id", (req, res) => {
 });
 
 //create comment
-app.put("/api/restaurants/:id", (req, res) => {
+app.put("/api/restaurants/:id/comment", (req, res) => {
   console.log("put");
   console.log(req.body);
   Restaurant.findOne({ _id: req.params.id })
@@ -63,6 +63,7 @@ app.put("/api/restaurants/:id", (req, res) => {
 
  //update restaurant entry
  app.put('/api/restaurants/:id', (req, res) => {
+   console.log(req.body)
   Restaurant.findByIdAndUpdate(req.params.id, req.body)
   .then(restaurant => {
     restaurant.save()
