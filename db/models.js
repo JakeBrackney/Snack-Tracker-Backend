@@ -13,6 +13,7 @@ const RestaurantSchema = new mongoose.Schema({
   budget: String,
   accolades: String,
   comments: [CommentSchema],
+  snacks: String
 });
 
 module.exports = 
